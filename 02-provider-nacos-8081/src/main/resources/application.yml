@@ -25,6 +25,7 @@ spring:
         server-addr: localhost:8848
         username: nacos
         password: nacos
+#        ephemeral: false # 默认为 true
 
 logging:
   pattern:
