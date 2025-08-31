@@ -3,15 +3,21 @@ package com.abc.controller;
 import com.abc.bean.Depart;
 import com.abc.service.DepartService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RequestMapping("/provider/depart")
 @RestController
 public class DepartController {
     @Autowired
     private final DepartService departService;
+
+    @Autowired
+    private DiscoveryClient discoveryClient;
 
     public DepartController(DepartService departService) {
         this.departService = departService;
@@ -40,6 +46,19 @@ public class DepartController {
     @GetMapping("/list")
     public List<Depart> getAllHandle() {
         return departService.listAllDeparts();
+    }
+
+
+    @GetMapping("/discovery")
+    public Map<Object, Object> discoveryServiceInfo() {
+        Map<Object, Object> info = new HashMap<>();
+        List<String> services = discoveryClient.getServices();
+        for (String serviceName : services) {
+            info.put(serviceName, discoveryClient.getInstances(serviceName));
+        }
+
+
+        return info;
     }
 
 
