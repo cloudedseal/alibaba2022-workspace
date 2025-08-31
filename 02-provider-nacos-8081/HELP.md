@@ -44,3 +44,25 @@ curl -d 'serviceName=depart-provider' \
 X DELETE 'http://127.0.0.1:8848/nacos/v2/ns/instance'
 ```
 
+
+# nacos 配置外部存储 mysql
+
+1. /conf/mysql.schema.sql
+2. 修改配置
+```
+      #*************** Config Module Related Configurations ***************#
+### If use MySQL as datasource:
+### Deprecated configuration property, it is recommended to use `spring.sql.init.platform` replaced.
+spring.datasource.platform=mysql
+spring.sql.init.platform=mysql
+
+### Count of DB:
+db.num=1
+
+### Connect URL of DB:
+db.url.0=jdbc:mysql://127.0.0.1:3306/nacos_config?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai
+db.user.0=root
+db.password.0=password
+```
+3. 重启 nacos
+
