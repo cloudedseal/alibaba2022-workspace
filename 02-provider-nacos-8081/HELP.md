@@ -2,6 +2,13 @@
 
 1. [QWEN jpa config](https://chat.qwen.ai/c/40b181ca-5bd3-41e3-8fc8-8a7ec65aa40d)
 
+# nacos 截图
+
+!["微服务启动-登录 nacos"](images/nacos-micro-service-login.png "微服务启动-登录 nacos")
+!["nacos-服务列表-服务名"](images/nacos-服务列表-服务名.png "nacos-服务列表-服务名")
+!["nacos-持久实例服务详情"](images/nacos-持久实例服务详情.png "nacos-持久实例服务详情")
+!["nacos-服务详情"](images/nacos-服务详情.png "nacos-服务详情")
+
 
 # nacos 临时实例，持久实例
 
