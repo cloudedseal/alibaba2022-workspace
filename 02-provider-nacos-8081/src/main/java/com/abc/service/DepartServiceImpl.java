@@ -4,6 +4,7 @@ import com.abc.bean.Depart;
 import com.abc.repository.DepartRepository;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,6 +13,9 @@ import java.util.List;
 public class DepartServiceImpl implements DepartService {
     @Autowired
     private DepartRepository repository;
+
+    @Value("${server.port}")
+    private String port;
 
     @Override
     public boolean saveDepart(Depart depart) {
@@ -47,7 +51,7 @@ public class DepartServiceImpl implements DepartService {
             return  repository.getReferenceById(id);
         }
         Depart depart = new Depart();
-        depart.setName("this is no depart");
+        depart.setName("this is no depart" + port);
         return depart;
     }
 

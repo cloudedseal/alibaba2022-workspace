@@ -48,9 +48,8 @@ curl -d 'serviceName=depart-provider' \
 -d 'ephemeral=false' \
 -d 'username=nacos' \
 -d 'password=nacos' \
-X DELETE 'http://127.0.0.1:8848/nacos/v2/ns/instance'
+-X DELETE 'http://127.0.0.1:8848/nacos/v2/ns/instance'
 ```
-
 
 # nacos 配置外部存储 mysql
 
@@ -73,3 +72,6 @@ db.password.0=password
 ```
 3. 重启 nacos
 
+# 服务隔离
+
+!["nacos-服务隔离"](images/nacos-service-isolation.png "nacos-服务隔离")
