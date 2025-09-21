@@ -13,7 +13,6 @@ spring:
         server-addr: localhost:8848
         username: nacos
         password: nacos
-        namespace:
     openfeign:
       client:
         config:
@@ -21,7 +20,7 @@ spring:
             connect-timeout: 1000
             read-timeout: 2000
           depart-provider: # 局部配置
-            connect-timeout: 1000
+            connect-timeout: 2000
             read-timeout: 2000
 
       compression:
