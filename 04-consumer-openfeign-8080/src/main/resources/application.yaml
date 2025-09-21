@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+
+spring:
+  # micros service name
+  application:
+    name: depart-consumer
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        group: MY_GROUP
+        namespace:
+logging:
+  level:
+    com.alibaba.nacos.client : trace
+
