@@ -13,7 +13,6 @@ spring:
         server-addr: localhost:8848
         username: nacos
         password: nacos
-        group: MY_GROUP
         namespace:
     openfeign:
       client:
