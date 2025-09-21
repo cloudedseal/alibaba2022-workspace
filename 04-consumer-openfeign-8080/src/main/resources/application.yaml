@@ -15,6 +15,23 @@ spring:
         password: nacos
         group: MY_GROUP
         namespace:
+    openfeign:
+      client:
+        config:
+          default: #全局配置
+            connect-timeout: 1000
+            read-timeout: 2000
+          depart-provider: # 局部配置
+            connect-timeout: 1000
+            read-timeout: 2000
+
+      compression:
+        request:
+          enabled: true
+          mime-types: ["text/xml", "application/xml", "application/json"]
+          min-request-size: 1024
+        response:
+          enabled: true
 logging:
   level:
     com.alibaba.nacos.client : trace
