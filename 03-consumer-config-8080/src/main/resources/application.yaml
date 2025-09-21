@@ -1,0 +1,20 @@
+spring:
+  # micros service name
+  application:
+    name: depart-consumer
+
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yml # 使用的配置类型。默认 properties
+        username: nacos
+        password: nacos
+
+
+  #        shared-configs: shareconfig.yml,shareconfig2.yml # 共享配置
+  config:
+    import:
+      - optional:nacos:${spring.application.name}.${spring.cloud.nacos.config.file-extension}
+
+
