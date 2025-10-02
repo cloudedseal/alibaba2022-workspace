@@ -6,17 +6,42 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: my_route
-          uri: https://baidu.com
+        - id: custom_predicate
+          uri: https://www.douban.com/
           predicates:
-            - Path=/bd
+            - Auth=zhangsan, 12345
+        - id: token_predicate
+          uri: https://www.baidu.com
+          predicates:
+            - Token=12345
 
-        - id: tb_route
-          uri: https://taobao.com
-          predicates:
-            - Path=/tb
 
-        - id: jd_route
-          uri: https://jd.com
-          predicates:
-            - Path=/jd
+#        - id: my_route
+#          uri: https://baidu.com
+#          predicates:
+#            - Path=/bd
+#
+#        - id: tb_route
+#          uri: https://taobao.com
+#          predicates:
+#            - Path=/tb
+#
+#        - id: jd_route
+#          uri: https://jd.com
+#          predicates:
+#            - Path=/jd
+
+#        - id: after_router
+#          uri: https://www.bilibili.com/
+#          predicates:
+#            - After=2025-10-01T10:10:10.789-07:00
+#
+#        - id: before_router
+#          uri: https://www.youku.com
+#          predicates:
+#            - After=2025-10-01T10:10:10.789-07:00
+#
+#        - id: between_router
+#          uri: https://www.iqiyi.com
+#          predicates:
+#            - Between=2025-10-01T10:10:10.789-07:00,2025-10-10T10:10:10.789-07:00
