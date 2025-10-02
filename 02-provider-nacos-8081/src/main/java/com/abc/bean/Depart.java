@@ -2,6 +2,7 @@ package com.abc.bean;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Table(name = "depart")
 @Entity

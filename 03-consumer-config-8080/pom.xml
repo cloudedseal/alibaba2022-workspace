@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.abc</groupId>
-    <artifactId>consumer-config-8080</artifactId>
+    <artifactId>03-consumer-config-8080</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>03-consumer-config-8080</name>
     <description>03-consumer-nacos-8080</description>

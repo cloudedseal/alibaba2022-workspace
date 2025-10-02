@@ -19,8 +19,8 @@ Connected to the target VM, address: '127.0.0.1:65108', transport: 'socket'
  :: Spring Boot ::                (v3.0.6)
 
 2025-08-31T17:01:26.701+08:00  WARN 62727 --- [           main] c.a.nacos.client.logging.NacosLogging    : Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
-2025-08-31T17:01:26.709+08:00  INFO 62727 --- [           main] com.abc.NacosConsumer8080Application     : Starting NacosConsumer8080Application using Java 24.0.1 with PID 62727 (Documents/alibaba2022-workspace/02-consumer-nacos-8080/target/classes started by yang in Documents/alibaba2022-workspace)
-2025-08-31T17:01:26.710+08:00  INFO 62727 --- [           main] com.abc.NacosConsumer8080Application     : No active profile set, falling back to 1 default profile: "default"
+2025-08-31T17:01:26.709+08:00  INFO 62727 --- [           main] com.abc.OpenFeignConsumer8080Application     : Starting NacosConsumer8080Application using Java 24.0.1 with PID 62727 (Documents/alibaba2022-workspace/02-consumer-nacos-8080/target/classes started by yang in Documents/alibaba2022-workspace)
+2025-08-31T17:01:26.710+08:00  INFO 62727 --- [           main] com.abc.OpenFeignConsumer8080Application     : No active profile set, falling back to 1 default profile: "default"
 2025-08-31T17:01:27.249+08:00  INFO 62727 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=095eae33-2def-3938-ad06-9ce49eceede5
 
 2025-08-31T17:01:27.492+08:00  INFO 62727 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
@@ -61,7 +61,7 @@ WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
 
 2025-08-31T17:01:28.979+08:00  INFO 62727 --- [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP depart-consumer 192.168.0.100:8080 register finished
 
-2025-08-31T17:01:28.988+08:00  INFO 62727 --- [           main] com.abc.NacosConsumer8080Application     : Started NacosConsumer8080Application in 2.638 seconds (process running for 4.028)
+2025-08-31T17:01:28.988+08:00  INFO 62727 --- [           main] com.abc.OpenFeignConsumer8080Application     : Started NacosConsumer8080Application in 2.638 seconds (process running for 4.028)
 2025-08-31T17:01:33.149+08:00 DEBUG 62727 --- [naming.failover] com.alibaba.nacos.client.naming          : failover switch is not found, 00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
 2025-08-31T17:01:38.149+08:00 DEBUG 62727 --- [naming.failover] com.alibaba.nacos.client.naming          : failover switch is not found, 00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
 2025-08-31T17:01:43.154+08:00 DEBUG 62727 --- [naming.failover] com.alibaba.nacos.client.naming          : failover switch is not found, 00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00

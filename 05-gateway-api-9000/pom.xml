@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.abc</groupId>
-    <artifactId>04-consumer-openfeign-8080</artifactId>
+    <artifactId>05-gateway-config-9000</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>04-consumer-openfeign-8080</name>
-    <description>04-consumer-openfeign-8080</description>
+    <name>05-gateway-config-9000</name>
+    <description>05-gateway-config-9000</description>
     <url/>
     <licenses>
         <license/>
@@ -33,9 +33,14 @@
         <spring-cloud-alibaba.version>2022.0.0.0-RC2</spring-cloud-alibaba.version>
     </properties>
     <dependencies>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-web</artifactId>-->
+<!--        </dependency>-->
+
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
 
         <dependency>
@@ -49,26 +54,16 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-loadbalancer</artifactId>-->
+<!--        </dependency>-->
 
-        <dependency>
-            <!--            服务发现依赖-->
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            &lt;!&ndash;            服务发现依赖&ndash;&gt;-->
+<!--            <groupId>com.alibaba.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
+<!--        </dependency>-->
     </dependencies>
 
     <dependencyManagement>

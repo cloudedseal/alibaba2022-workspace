@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.abc</groupId>
-    <artifactId>provider-config-8081</artifactId>
+    <artifactId>03-provider-config-8081</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>03-provider-config-8081</name>
     <description>03-provider-config-8081</description>

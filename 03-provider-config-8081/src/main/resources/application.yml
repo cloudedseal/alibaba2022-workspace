@@ -8,18 +8,7 @@ spring:
         file-extension: yml # 使用的配置类型。默认 properties
         username: nacos
         password: nacos
-        shared-configs[0]:
-          data-id: shareconfig.yml
-          refresh: true
-        shared-configs[1]:
-          data-id: shareconfig2.yml
-          refresh: true
-        extension-configs[0]:
-          data-id: extensionconfig.yml
-          refresh: true
-        extension-configs[1]:
-          data-id: extensionconfig2.yml
-          refresh: true
+
 
   #        shared-configs: shareconfig.yml,shareconfig2.yml # 共享配置
   config:

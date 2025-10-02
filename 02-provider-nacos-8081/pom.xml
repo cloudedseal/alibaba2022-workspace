@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.abc</groupId>
-    <artifactId>provider-nacos-8081</artifactId>
+    <artifactId>02-provider-nacos-8081</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>02-provider-nacos-8081</name>
     <description>02-provider-nacos-8081</description>
