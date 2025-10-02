@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.abc</groupId>
-    <artifactId>05-gateway-config-9000</artifactId>
+    <artifactId>05-gateway-api-9000</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>05-gateway-config-9000</name>
-    <description>05-gateway-config-9000</description>
+    <name>gateway-api-9000</name>
+    <description>gateway-api-9000</description>
     <url/>
     <licenses>
         <license/>
