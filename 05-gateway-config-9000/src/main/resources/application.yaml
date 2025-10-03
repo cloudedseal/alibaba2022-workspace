@@ -27,6 +27,14 @@ spring:
             - Path=/info/**
           filters:
             - AddHeader=new-color, red
+          metadata:
+            cors:
+              allowOrigins: "*"
+              allowMethods:
+                - GET
+                - POST
+              allowedHeaders: "*"
+              maxAge: 30
         - id: add_header_filter
           uri: http://localhost:8080
           predicates:
