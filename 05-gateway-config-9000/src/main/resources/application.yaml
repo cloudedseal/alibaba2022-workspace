@@ -9,6 +9,14 @@ spring:
         - id: add_header_filter_filter
           uri: http://localhost:8080
           predicates:
+            - Path=/info/time
+          filters:
+            - One=onefilter, 111
+            - Two=twofilter, 222
+            - Three=threefilter, 333
+        - id: add_header_filter_filter
+          uri: http://localhost:8080
+          predicates:
             - Path=/info/**
           filters:
             - AddHeader=new-color, red
