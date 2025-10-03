@@ -34,7 +34,18 @@ spring:
             - AddRequestParameter=color,blue
             - AddRequestParameter=color,red
             - AddRequestParameter=size,123
-
+        - id: prefix_path_filter
+          uri: http://localhost:8081
+          predicates:
+            - Path=/depart/**
+          filters:
+            - PrefixPath=/provider
+        - id: strip_prefix_path_filter
+          uri: http://localhost:8081
+          predicates:
+            - Path=/aaa/bbb/provider/**
+          filters:
+            - StripPrefix=2
         - id: custom_predicate
           uri: https://www.douban.com/
           predicates:
