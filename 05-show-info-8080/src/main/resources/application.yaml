@@ -6,12 +6,6 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: add_header_filter
-          uri: http://localhost:8080
-          predicates:
-            - Path=/info/header
-          filters:
-            - AddRequestHeader=X-Request-Color, blue
         - id: custom_predicate
           uri: https://www.douban.com/
           predicates:
