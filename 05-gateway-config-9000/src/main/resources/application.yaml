@@ -18,6 +18,14 @@ spring:
             - Path=/info/allHeader
           filters:
             - AddRequestHeadersIfNotPresent=X-Request-Color:blue,City:beijing
+        - id: add_params_filter
+          uri: http://localhost:8080
+          predicates:
+            - Path=/info/params
+          filters:
+            - AddRequestParameter=color,blue
+            - AddRequestParameter=color,red
+            - AddRequestParameter=size,123
         - id: custom_predicate
           uri: https://www.douban.com/
           predicates:

@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Enumeration;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/info")
@@ -29,6 +30,20 @@ public class SomeController {
             Enumeration<String> headers = request.getHeaders(name);
             while (headers.hasMoreElements()) {
                 sb.append(headers.nextElement()).append(", ");
+            }
+            sb.append("<br>");
+        }
+        return sb.toString();
+    }
+
+    @RequestMapping("/params")
+    public String paramsHandle(HttpServletRequest request) {
+        StringBuilder sb = new StringBuilder();
+        Map<String, String[]> parameterMap = request.getParameterMap();
+        for (String key : parameterMap.keySet()) {
+            sb.append(key).append(": ");
+            for (String val : parameterMap.get(key)) {
+                sb.append(val).append(", ");
             }
             sb.append("<br>");
         }
