@@ -49,4 +49,9 @@ public class SomeController {
         }
         return sb.toString();
     }
+
+    @RequestMapping("/time")
+    public String timeHandle(){
+        return "reach time" + System.currentTimeMillis();
+    }
 }
