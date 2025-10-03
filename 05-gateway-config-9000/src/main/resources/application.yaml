@@ -46,6 +46,12 @@ spring:
             - Path=/aaa/bbb/provider/**
           filters:
             - StripPrefix=2
+        - id: rewrite_path_filter
+          uri: http://localhost:8081
+          predicates:
+            - Path=/red/blue/**
+          filters:
+            - RewritePath=/red/blue,/provider/depart
         - id: custom_predicate
           uri: https://www.douban.com/
           predicates:
