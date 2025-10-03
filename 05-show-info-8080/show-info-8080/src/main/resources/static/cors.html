@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cors</title>
+<!--    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
+    <script>
+        function accessDepart(){
+            $.get("http://localhost:9000/info/header", function (data){
+                alert(data);
+            })
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="access depart" onclick="accessDepart()">
+</body>
+</html>

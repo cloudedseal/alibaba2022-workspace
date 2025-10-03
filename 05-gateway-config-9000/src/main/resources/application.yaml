@@ -5,6 +5,13 @@ server:
 spring:
   cloud:
     gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origins: "*"
+            allowed-methods:
+              - GET
+              - POST
       routes:
         - id: add_header_filter_filter
           uri: http://localhost:8080
