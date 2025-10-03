@@ -6,6 +6,12 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: add_header_filter_filter
+          uri: http://localhost:8080
+          predicates:
+            - Path=/info/**
+          filters:
+            - AddHeader=new-color, red
         - id: add_header_filter
           uri: http://localhost:8080
           predicates:
